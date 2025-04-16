@@ -831,6 +831,7 @@
                                 text-align: left;
                               "
                             >
+                              <!-- for desktop size -->
                               <table
                                 id="QRcode-table"
                                 width="100%"
@@ -916,6 +917,111 @@
                                           font-size: 18px;
                                           line-height: 18px;
                                           text-align: left;
+                                        "
+                                      >
+                                        For further details and to register to
+                                        attend please scan the QR code, or click
+                                        <a
+                                          style="text-decoration: underline"
+                                          href="#"
+                                          >here</a
+                                        >:
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <!-- for mobile size  -->
+                              <table
+                                id="QRcode-table-mobile"
+                                width="100%"
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                style="
+                                  max-width: 100%;
+                                  min-width: 100%;
+                                  border-collapse: collapse;
+                                  mso-table-lspace: 0pt;
+                                  mso-table-rspace: 0pt;
+                                  -ms-text-size-adjust: 100%;
+                                  -webkit-text-size-adjust: 100%;
+                                "
+                                class="tb-columns tb-speaker"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td
+                                      width="380"
+                                      class="column-container txt"
+                                      valign="center"
+                                      style="padding: 0 !important"
+                                    >
+                                      <h4
+                                        id="QRcode-table-content"
+                                        style="
+                                          margin-top: 0;
+                                          margin-bottom: 0;
+                                          margin-right: 0;
+                                          margin-left: 0;
+                                          mso-line-height-rule: exactly;
+                                          -ms-text-size-adjust: 100%;
+                                          -webkit-text-size-adjust: 100%;
+                                          word-break: break-word;
+                                          color: #1f335a;
+                                          font-family: 'Arial', Helvetica,
+                                            sans-serif;
+                                          font-size: 32px;
+                                          font-weight: bold;
+                                          text-align: center;
+                                        "
+                                      >
+                                        REGISTRATION
+                                      </h4>
+                                    </td>
+                                    <td
+                                      width="120"
+                                      class="column-container img"
+                                      style="
+                                        line-height: 1;
+                                        margin: 0 !important;
+                                        padding: 0 !important;
+                                      "
+                                      valign="center"
+                                    >
+                                      <img
+                                        src="https://media-hosting.imagekit.io/9df303b9f30c4f3b/Adelaide_QR.png?Expires=1839395425&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=bQLWQWyMW4Ar9ybZ6GF4UqKW0g~eTCgNLGp68HIqgqRyXlfN~Kjyfqm7arZlD1sfKL6PF60XP7jq35x1yxCREEGKfRAFXYE2Dj19IpZZxqWgWn24TzoFBbV0AG~Bt2ygFw0M03dzpNlWf3LklfDKGGHmNNQT82CIVQ0NM9s4eVgvUCLlOluulY4S0LlNhLzJtXhMqmalG6f~Xa4pbkW~W8B~nxz5PEwK4YeM0tkb7uzA-i5h4AtDMIDlxrm-mRFr0qCgDOCVX92CYqxAbqYWAhUuVs9ArYMOKtKpUMKwMJn~ZojG~OSy3EAvbpM19CK1c822yiazRfyTn9CaNxqeMQ__"
+                                        alt="QR Code"
+                                        width="110"
+                                        style="
+                                          max-width: 110px;
+                                          padding-bottom: 10px;
+                                          display: block !important;
+                                          vertical-align: bottom;
+                                          border: 0;
+                                          height: auto;
+                                          outline: none;
+                                          text-decoration: none;
+                                          -ms-interpolation-mode: bicubic;
+                                        "
+                                      />
+                                      <p
+                                        id="QRcode-table-content"
+                                        style="
+                                          margin-top: 0;
+                                          margin-bottom: 0;
+                                          margin-right: 0;
+                                          margin-left: 0;
+                                          mso-line-height-rule: exactly;
+                                          -ms-text-size-adjust: 100%;
+                                          -webkit-text-size-adjust: 100%;
+                                          word-break: break-word;
+                                          color: #1f335a;
+                                          font-family: 'Arial', Helvetica,
+                                            sans-serif;
+                                          font-size: 18px;
+                                          line-height: 18px;
+                                          text-align: center;
                                         "
                                       >
                                         For further details and to register to
@@ -3392,7 +3498,11 @@
     color: inherit;
     text-decoration: none;
   }
-  /**/
+  @media only screen and (min-width: 621px) {
+    #QRcode-table-mobile {
+      display: none;
+    }
+  }
   @media only screen and (max-width: 620px) {
     body,
     table,
@@ -3402,18 +3512,9 @@
     li {
       -webkit-text-size-adjust: none !important;
     }
-    .tb-columns .column-container.img {
-      order: 2;
+    #QRcode-table {
+      display: none;
     }
-
-    .tb-columns .column-container.txt {
-      order: 3;
-    }
-
-    .tb-columns .column-container h4 {
-      order: 1;
-    }
-
     #QRcode-table-content {
       margin-bottom: 10px !important;
       text-align: center !important;
